@@ -1,0 +1,22 @@
+package: popup-dododo
+version: 0.0.1
+
+sources:
+  include:
+    - site-lisp/popup-dododo/**/*.l
+  exclude:
+    - site-lisp/popup-dododo/**/tests/*.l
+    - site-lisp/popup-dododo/**/examples/*.l
+
+document:
+  - site-lisp/popup-dododo/docs/README.rd
+
+files:
+  include:
+    - site-lisp/**/*.l
+    - site-lisp/**/*.lc
+    - site-lisp/popup-dododo/docs/**/*
+    - site-lisp/popup-dododo/docs/**/*.*
+  exclude:
+    - site-lisp/popup-dododo-scratch.l
+    - site-lisp/popup-dododo/tests/*.*
