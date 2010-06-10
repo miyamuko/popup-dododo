@@ -18,5 +18,4 @@ files:
     - site-lisp/popup-dododo/docs/**/*
     - site-lisp/popup-dododo/docs/**/*.*
   exclude:
-    - site-lisp/popup-dododo-scratch.l
     - site-lisp/popup-dododo/tests/*.*
