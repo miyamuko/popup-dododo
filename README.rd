@@ -105,6 +105,10 @@ popup-dododo に指定可能なグリフ名は以下のとおりです。
 
 popup-dododo は以下のパッケージを利用しています。
 
+  * popup-dododo.ffi
+
+    winapi 定義
+
   * popup-dododo.api
 
     popup 表示を行うライブラリ。

@@ -1,17 +1,17 @@
-;;; -*- mode: lisp; package: popup-dododo.editor -*-
-;;;
-;;; File: popup-dododo/editor/hooks.l
-;;;
-;;; License:
-;;;
-;;;   Copyright (c) 2007 MIYAMUKO Katsuyuki.
-;;;
-;;;   popup-dododo is released under an MIT license.
-;;;   See popup-dododo/docs/MIT-LICENSE for full license.
-;;;
+;;;; -*- mode: lisp; package: popup-dododo.editor -*-
+;;;;
+;;;; File: popup-dododo/editor/hooks.l
+;;;;
+;;;; License:
+;;;;
+;;;;   Copyright (c) 2007 MIYAMUKO Katsuyuki.
+;;;;
+;;;;   popup-dododo is released under an MIT license.
+;;;;   See popup-dododo/docs/MIT-LICENSE for full license.
+;;;;
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
-  (require "popup-dododo/package")
+  (require "popup-dododo/editor/package")
   (require "popup-dododo/editor/command")
   )
 
@@ -186,4 +186,4 @@
 
 (provide "popup-dododo/editor/hooks")
 
-;;; End
+;;;; End

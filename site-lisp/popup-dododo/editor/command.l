@@ -1,18 +1,18 @@
-;;; -*- mode: lisp; package: popup-dododo.editor -*-
-;;;
-;;; File: popup-dododo/editor/command.l
-;;;
-;;; License:
-;;;
-;;;   Copyright (c) 2007 MIYAMUKO Katsuyuki.
-;;;
-;;;   popup-dododo is released under an MIT license.
-;;;   See popup-dododo/docs/MIT-LICENSE for full license.
-;;;
+;;;; -*- mode: lisp; package: popup-dododo.editor -*-
+;;;;
+;;;; File: popup-dododo/editor/command.l
+;;;;
+;;;; License:
+;;;;
+;;;;   Copyright (c) 2007 MIYAMUKO Katsuyuki.
+;;;;
+;;;;   popup-dododo is released under an MIT license.
+;;;;   See popup-dododo/docs/MIT-LICENSE for full license.
+;;;;
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
-  (require "popup-dododo/package")
   (require "popup-dododo/api")
+  (require "popup-dododo/editor/package")
   )
 
 (in-package :popup-dododo.editor)
@@ -31,15 +31,11 @@
               (RECT-bottom r)
               (RECT-right r)))))
 
-(defun get-current-mouse-point ()
-  (let ((pos (make-POINT)))
-    (GetCursorPos pos)
-    (values (POINT-x pos)
-            (POINT-y pos))))
-
 (defun calc-point (point)
   (cond ((eq point :mouse)
-         (get-current-mouse-point))
+         (get-current-mouse-pos))
+        ((eq point :caret)
+         (get-current-caret-pos (get-window-handle)))
         ((eq point :point)
          (calc-point (point)))
         ((integerp point)
@@ -78,4 +74,4 @@
 
 (provide "popup-dododo/editor/command")
 
-;;; End
+;;;; End

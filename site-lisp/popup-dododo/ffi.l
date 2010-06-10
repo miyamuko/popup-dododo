@@ -1,6 +1,6 @@
 ;;;; -*- mode: lisp; package: user -*-
 ;;;;
-;;;; File: popup-dododo/editor.l
+;;;; File: popup-dododo/ffi.l
 ;;;;
 ;;;; License:
 ;;;;
@@ -12,9 +12,8 @@
 
 (in-package :user)
 
-(require "popup-dododo/editor/command")
-(require "popup-dododo/editor/hooks")
+(require "popup-dododo/ffi/user32")
 
-(provide "popup-dododo/editor")
+(provide "popup-dododo/ffi")
 
 ;;;; End

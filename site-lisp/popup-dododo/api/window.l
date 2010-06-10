@@ -1,17 +1,17 @@
-;;; -*- mode: lisp; package: popup-dododo.api -*-
-;;;
-;;; File: popup-dododo/api/window.l
-;;;
-;;; License:
-;;;
-;;;   Copyright (c) 2007 MIYAMUKO Katsuyuki.
-;;;
-;;;   popup-dododo is released under an MIT license.
-;;;   See popup-dododo/docs/MIT-LICENSE for full license.
-;;;
+;;;; -*- mode: lisp; package: popup-dododo.api -*-
+;;;;
+;;;; File: popup-dododo/api/window.l
+;;;;
+;;;; License:
+;;;;
+;;;;   Copyright (c) 2007 MIYAMUKO Katsuyuki.
+;;;;
+;;;;   popup-dododo is released under an MIT license.
+;;;;   See popup-dododo/docs/MIT-LICENSE for full license.
+;;;;
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
-  (require "popup-dododo/package")
+  (require "popup-dododo/api/package")
   (require "popup-dododo/api/context")
   (require "popup-dododo/api/util")
   )
@@ -50,7 +50,8 @@
   (translate-to-window-handle (hwnd winctx)
     (unless hwnd
       (return-from dododo-window-exist-p nil))
-    (unless (zerop (GetWindowLong hwnd GWL_STYLE))
+    (when (and (window-context-exist-p hwnd)
+               (not (zerop (GetWindowLong hwnd GWL_STYLE))))
       (return-from dododo-window-exist-p t))
     ;; invalid hwnd?
     (remove-window-context hwnd)
@@ -132,13 +133,13 @@
   (DefWindowProc hwnd msg wparam lparam))
 
 (unless (fboundp 'window-proc)
-  (defun-c-callable LRESULT window-proc ((HWND hwnd)
-                                         (UINT msg)
-                                         (WPARAM wparam)
-                                         (LPARAM lparam))
+  (c:defun-c-callable LRESULT window-proc ((HWND hwnd)
+                                           (UINT msg)
+                                           (WPARAM wparam)
+                                           (LPARAM lparam))
     (window-proc-impl hwnd msg wparam lparam)))
 
 
 (provide "popup-dododo/api/window")
 
-;;; End
+;;;; End

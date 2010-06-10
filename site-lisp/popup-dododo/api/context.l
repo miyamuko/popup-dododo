@@ -1,17 +1,17 @@
-;;; -*- mode: lisp; package: popup-dododo.api -*-
-;;;
-;;; File: popup-dododo/api/context.l
-;;;
-;;; License:
-;;;
-;;;   Copyright (c) 2007 MIYAMUKO Katsuyuki.
-;;;
-;;;   popup-dododo is released under an MIT license.
-;;;   See popup-dododo/docs/MIT-LICENSE for full license.
-;;;
+;;;; -*- mode: lisp; package: popup-dododo.api -*-
+;;;;
+;;;; File: popup-dododo/api/context.l
+;;;;
+;;;; License:
+;;;;
+;;;;   Copyright (c) 2007 MIYAMUKO Katsuyuki.
+;;;;
+;;;;   popup-dododo is released under an MIT license.
+;;;;   See popup-dododo/docs/MIT-LICENSE for full license.
+;;;;
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
-  (require "popup-dododo/package")
+  (require "popup-dododo/api/package")
   )
 
 (in-package :popup-dododo.api)
@@ -37,6 +37,9 @@
 
 (defun remove-window-context (hwnd)
   (remhash hwnd *window-context-hash*))
+
+(defun window-context-exist-p (hwnd)
+  (cdr (multiple-value-list (get-window-context hwnd))))
 
 (defun list-window-context ()
   (let ((r))
@@ -72,4 +75,4 @@
 
 (provide "popup-dododo/api/context")
 
-;;; End
+;;;; End

@@ -15,6 +15,13 @@
 (require "popup-dododo/api")
 (require "popup-dododo/editor")
 
+;#+xyzzy
+(progn
+  ;; for convenience
+  (use-package :popup-dododo.editor :editor)
+  (use-package :popup-dododo.editor :user))
+
+
 (provide "popup-dododo")
 
 ;; End

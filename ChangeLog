@@ -1,3 +1,146 @@
+2007-08-25  MIYAMUKO Katsuyuki
+
+	* :user, :editor への use-package は一番最後にするようにした。
+
+	* (window-context-exist-p): 指定した HWND に対応する winctx があるなら t
+	  (dododo-window-exist-p): この winctx の HWND が popup-dododo の管理下かどうか判断するようにした。
+	    *window-context-hash* を clear したらエラーになったことがあったけどコレでいいかどうかあやしい。
+
+	* (popup-dododo): :caret を引数に指定できるようにした。
+	  (get-current-mouse-pos): editor/command.l から api/util.l に移動。
+	  (get-current-caret-pos): 追加。GetCaretPos する
+
+	* - package.l を分割
+	  - :winapi を :use せずに、必要なシンボルだけを import するようにした。
+
+2007-05-27  MIYAMUKO Katsuyuki
+
+	* popup-dododo 0.0.1 released!
+
+	* (num?): parse-integer :junk-allowed t なら不正な場合でも例外を出さなくなるので、これで再実装。
+
+	* - add-, remove-, clear- を export.
+
+	* - (popup-dododo-by-definition-list): 引数を破壊していたのを修正。delete-if-not => remove-if-not.
+	  - (remove-popup-dododo-on): こっちも一応破壊的メソッドを使わないようにした。
+
+	* - define-popup-dododo-on-xxx => add-popup-dododo-on-xxx.
+	  - remove-popup-dododo-on-xxx
+	  - clear-popup-dododo-on-xxx
+
+	* - (popup-dododo-by-definition, popup-dododo-by-definition0):
+	    一度作成したウィンドウをキャッシュするようにした。
+
+	* - move-dododo-window の引数変更に追従
+
+	* - should require api/util
+
+	* - (dododo-window-exist-p): 指定されたウィンドウの存在チェック
+	  - (move-dododo-window): top, left, right, bottom で指定可能なようにした。
+	  - (show-dododo-window): UpdateWindow をやめてみた。
+
+	* - (popup-dododo-window): calc-pos-x, y を使うようにした。
+
+	* - (calc-pos-x): left, right から x 座標を決定するユーティリティ。
+	  - (calc-pos-y): top, bottom から y 〃
+
+	* - (dododo-window-visible-p): hide か show か調べる。
+
+	* - (popup-existing-dododo): すでに存在するウィンドウを popup する。
+	  - (popup-dododo): fixed typo...
+
+	* - (move-dododo-window): 指定されたウィンドウを移動する。
+	  - (show-dododo-window): export!
+	  - (hide-dododo-window): ditto.
+
+	* - (popup-dododo-window): rename from create-dododo-window.
+
+	* - (create-dododo-window): rename from show-popup-dodod.
+
+	* - (draw-font): コメントアウトしてたコードを削除。
+
+	* - (calc-point): :point を指定すると現在の (point) に表示する。
+
+	* - (define-popup-dododo-on-command): コマンド入力時に dododo を表示するフック。
+	  - (define-popup-dododo-on-command-char): ditto
+
+2007-05-26  MIYAMUKO Katsuyuki
+
+	* - add require file.
+
+	* - require 整理。
+
+	* - (define-dododo-on-mouse): マウスイベントをフックして dododo を表示する。
+
+	* - (popup-dododo): パラメータのデフォルト値は show-popup-dododo 内で設定するようにした。
+	  - (popup-dododo): y に bottom を指定するようにした。
+
+	* - (show-popup-dododo): key だと明示的に nil を指定されると困るので内部で or してパラメータの
+	    デフォルト値を設定
+	  - (show-popup-dododo): x, y 指定を top, left, bottom, right で指定できるようにした。
+
+	* - (get-current-mouse-point): 現在のマウスの座標 (screen) 得る
+	  - (calc-point): point が :mouse ならマウスの座標を返す。
+	    それ以外なら point から座標を得る。
+
+	* - (in-package :user) を追加
+
+	* - (popup-dododo): 引数を key にした。
+	  - (popup-dododo): 最後に winctx を返してみた。
+
+	* - add hide-dododo-window
+
+	* - cairo, layered-window のロードを package.l で行うようにした。
+
+	* - types.l => context.l
+
+	* - layered-window の新 API を使うようにした。
+
+	* - パッケージ名変更 popup-dododo => popup-dododo.api
+
+	* - パッケージ変更。
+	    popup-dododo => popup-dododo.api
+	    popup-dododo-editor => popup-dododo.editor
+
+2007-05-21  MIYAMUKO Katsuyuki
+
+	* - editor のコマンド定義。
+
+	* - editor がらみの関数を定義する popup-dododo-editor パッケージを定義。
+
+	* - (show-popup-dododo): popup-dododo => show-popup-dododo, export した。
+
+	* - (destroy-all-dododo-window, destroy-dododo-window): export.
+
+	* - (*popup-dododo-glyph-name-list*): グリフ名の一覧。補完用に export.
+
+2007-05-20  MIYAMUKO Katsuyuki
+
+	* - glyph, dododo を追加。
+
+	* - (popup-dododo): width, height は内部で計算するようにした。
+	  - (draw-font): font size で cairo-scale して、相対的にレンダリングするようにした。
+	  - (popup-dododo-test-close-all): テスト用関数。
+
+	* - window-context: repeat を追加。 (x-repeat . y-repeat)
+
+	* - (popup-dododo): キーワード引数を取るようにした。
+
+	* - (show-dododo-window): translate-to-window-context を使うようにした。
+	  - (destroy-dododo-window): ditto.
+	  - (destroy-all-dododo-window): 追加。
+
+	* - (list-window-context): 管理している Window コンテキストをすべて返す関数。
+	  - (translate-to-window-context): window-context を指定されたらそのまま返すようにした。
+	  - (translate-to-window-handle): new function. HWND を取得するマクロ。
+
+	* - (window-proc-impl): NCHITTEST で HTCAPTION を返してドラッグできるようにした。
+	  - (window-proc-impl): HTCAPTION でも右クリックで終了できるようにした。
+
+	* - api/glyph.l を追加。
+
+	* - プロトタイプ作成。一応動くはず。
+
 2007-05-19  MIYAMUKO Katsuyuki
 
 	* popup-dododo 作成開始

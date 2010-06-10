@@ -1,20 +1,37 @@
-;;; -*- mode: lisp; package: popup-dododo.api -*-
-;;;
-;;; File: popup-dododo/api/util.l
-;;;
-;;; License:
-;;;
-;;;   Copyright (c) 2007 MIYAMUKO Katsuyuki.
-;;;
-;;;   popup-dododo is released under an MIT license.
-;;;   See popup-dododo/docs/MIT-LICENSE for full license.
-;;;
+;;;; -*- mode: lisp; package: popup-dododo.api -*-
+;;;;
+;;;; File: popup-dododo/api/util.l
+;;;;
+;;;; License:
+;;;;
+;;;;   Copyright (c) 2007 MIYAMUKO Katsuyuki.
+;;;;
+;;;;   popup-dododo is released under an MIT license.
+;;;;   See popup-dododo/docs/MIT-LICENSE for full license.
+;;;;
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
-  (require "popup-dododo/package")
+  (require "popup-dododo/api/package")
   )
 
 (in-package :popup-dododo.api)
+
+(export '(get-current-mouse-pos
+          get-current-caret-pos
+          ))
+
+(defun get-current-mouse-pos ()
+  (let ((pos (make-POINT)))
+    (GetCursorPos pos)
+    (values (POINT-x pos)
+            (POINT-y pos))))
+
+(defun get-current-caret-pos (hwnd)
+  (let ((pos (make-POINT)))
+    (GetCaretPos pos)
+    (ClientToScreen hwnd pos)
+    (values (POINT-x pos)
+            (POINT-y pos))))
 
 (defun calc-pos-x (left right size x-repeat)
   (cond (left left)
@@ -29,4 +46,4 @@
 
 (provide "popup-dododo/api/util")
 
-;;; End
+;;;; End
