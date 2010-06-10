@@ -1,55 +1,55 @@
 2007-08-25  MIYAMUKO Katsuyuki
 
-	* :user, :editor ‚Ö‚Ì use-package ‚Íˆê”ÔÅŒã‚É‚·‚é‚æ‚¤‚É‚µ‚½B
+	* :user, :editor ã¸ã® use-package ã¯ä¸€ç•ªæœ€å¾Œã«ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (window-context-exist-p): w’è‚µ‚½ HWND ‚É‘Î‰‚·‚é winctx ‚ª‚ ‚é‚È‚ç t
-	  (dododo-window-exist-p): ‚±‚Ì winctx ‚Ì HWND ‚ª popup-dododo ‚ÌŠÇ—‰º‚©‚Ç‚¤‚©”»’f‚·‚é‚æ‚¤‚É‚µ‚½B
-	    *window-context-hash* ‚ğ clear ‚µ‚½‚çƒGƒ‰[‚É‚È‚Á‚½‚±‚Æ‚ª‚ ‚Á‚½‚¯‚ÇƒRƒŒ‚Å‚¢‚¢‚©‚Ç‚¤‚©‚ ‚â‚µ‚¢B
+	* (window-context-exist-p): æŒ‡å®šã—ãŸ HWND ã«å¯¾å¿œã™ã‚‹ winctx ãŒã‚ã‚‹ãªã‚‰ t
+	  (dododo-window-exist-p): ã“ã® winctx ã® HWND ãŒ popup-dododo ã®ç®¡ç†ä¸‹ã‹ã©ã†ã‹åˆ¤æ–­ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	    *window-context-hash* ã‚’ clear ã—ãŸã‚‰ã‚¨ãƒ©ãƒ¼ã«ãªã£ãŸã“ã¨ãŒã‚ã£ãŸã‘ã©ã‚³ãƒ¬ã§ã„ã„ã‹ã©ã†ã‹ã‚ã‚„ã—ã„ã€‚
 
-	* (popup-dododo): :caret ‚ğˆø”‚Éw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
-	  (get-current-mouse-pos): editor/command.l ‚©‚ç api/util.l ‚ÉˆÚ“®B
-	  (get-current-caret-pos): ’Ç‰ÁBGetCaretPos ‚·‚é
+	* (popup-dododo): :caret ã‚’å¼•æ•°ã«æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  (get-current-mouse-pos): editor/command.l ã‹ã‚‰ api/util.l ã«ç§»å‹•ã€‚
+	  (get-current-caret-pos): è¿½åŠ ã€‚GetCaretPos ã™ã‚‹
 
-	* - package.l ‚ğ•ªŠ„
-	  - :winapi ‚ğ :use ‚¹‚¸‚ÉA•K—v‚ÈƒVƒ“ƒ{ƒ‹‚¾‚¯‚ğ import ‚·‚é‚æ‚¤‚É‚µ‚½B
+	* - package.l ã‚’åˆ†å‰²
+	  - :winapi ã‚’ :use ã›ãšã«ã€å¿…è¦ãªã‚·ãƒ³ãƒœãƒ«ã ã‘ã‚’ import ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
 2007-05-27  MIYAMUKO Katsuyuki
 
 	* popup-dododo 0.0.1 released!
 
-	* (num?): parse-integer :junk-allowed t ‚È‚ç•s³‚Èê‡‚Å‚à—áŠO‚ğo‚³‚È‚­‚È‚é‚Ì‚ÅA‚±‚ê‚ÅÄÀ‘•B
+	* (num?): parse-integer :junk-allowed t ãªã‚‰ä¸æ­£ãªå ´åˆã§ã‚‚ä¾‹å¤–ã‚’å‡ºã•ãªããªã‚‹ã®ã§ã€ã“ã‚Œã§å†å®Ÿè£…ã€‚
 
-	* - add-, remove-, clear- ‚ğ export.
+	* - add-, remove-, clear- ã‚’ export.
 
-	* - (popup-dododo-by-definition-list): ˆø”‚ğ”j‰ó‚µ‚Ä‚¢‚½‚Ì‚ğC³Bdelete-if-not => remove-if-not.
-	  - (remove-popup-dododo-on): ‚±‚Á‚¿‚àˆê‰”j‰ó“Iƒƒ\ƒbƒh‚ğg‚í‚È‚¢‚æ‚¤‚É‚µ‚½B
+	* - (popup-dododo-by-definition-list): å¼•æ•°ã‚’ç ´å£Šã—ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚delete-if-not => remove-if-not.
+	  - (remove-popup-dododo-on): ã“ã£ã¡ã‚‚ä¸€å¿œç ´å£Šçš„ãƒ¡ã‚½ãƒƒãƒ‰ã‚’ä½¿ã‚ãªã„ã‚ˆã†ã«ã—ãŸã€‚
 
 	* - define-popup-dododo-on-xxx => add-popup-dododo-on-xxx.
 	  - remove-popup-dododo-on-xxx
 	  - clear-popup-dododo-on-xxx
 
 	* - (popup-dododo-by-definition, popup-dododo-by-definition0):
-	    ˆê“xì¬‚µ‚½ƒEƒBƒ“ƒhƒE‚ğƒLƒƒƒbƒVƒ…‚·‚é‚æ‚¤‚É‚µ‚½B
+	    ä¸€åº¦ä½œæˆã—ãŸã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* - move-dododo-window ‚Ìˆø”•ÏX‚É’Ç]
+	* - move-dododo-window ã®å¼•æ•°å¤‰æ›´ã«è¿½å¾“
 
 	* - should require api/util
 
-	* - (dododo-window-exist-p): w’è‚³‚ê‚½ƒEƒBƒ“ƒhƒE‚Ì‘¶İƒ`ƒFƒbƒN
-	  - (move-dododo-window): top, left, right, bottom ‚Åw’è‰Â”\‚È‚æ‚¤‚É‚µ‚½B
-	  - (show-dododo-window): UpdateWindow ‚ğ‚â‚ß‚Ä‚İ‚½B
+	* - (dododo-window-exist-p): æŒ‡å®šã•ã‚ŒãŸã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®å­˜åœ¨ãƒã‚§ãƒƒã‚¯
+	  - (move-dododo-window): top, left, right, bottom ã§æŒ‡å®šå¯èƒ½ãªã‚ˆã†ã«ã—ãŸã€‚
+	  - (show-dododo-window): UpdateWindow ã‚’ã‚„ã‚ã¦ã¿ãŸã€‚
 
-	* - (popup-dododo-window): calc-pos-x, y ‚ğg‚¤‚æ‚¤‚É‚µ‚½B
+	* - (popup-dododo-window): calc-pos-x, y ã‚’ä½¿ã†ã‚ˆã†ã«ã—ãŸã€‚
 
-	* - (calc-pos-x): left, right ‚©‚ç x À•W‚ğŒˆ’è‚·‚éƒ†[ƒeƒBƒŠƒeƒBB
-	  - (calc-pos-y): top, bottom ‚©‚ç y V
+	* - (calc-pos-x): left, right ã‹ã‚‰ x åº§æ¨™ã‚’æ±ºå®šã™ã‚‹ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ã€‚
+	  - (calc-pos-y): top, bottom ã‹ã‚‰ y ã€ƒ
 
-	* - (dododo-window-visible-p): hide ‚© show ‚©’²‚×‚éB
+	* - (dododo-window-visible-p): hide ã‹ show ã‹èª¿ã¹ã‚‹ã€‚
 
-	* - (popup-existing-dododo): ‚·‚Å‚É‘¶İ‚·‚éƒEƒBƒ“ƒhƒE‚ğ popup ‚·‚éB
+	* - (popup-existing-dododo): ã™ã§ã«å­˜åœ¨ã™ã‚‹ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’ popup ã™ã‚‹ã€‚
 	  - (popup-dododo): fixed typo...
 
-	* - (move-dododo-window): w’è‚³‚ê‚½ƒEƒBƒ“ƒhƒE‚ğˆÚ“®‚·‚éB
+	* - (move-dododo-window): æŒ‡å®šã•ã‚ŒãŸã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’ç§»å‹•ã™ã‚‹ã€‚
 	  - (show-dododo-window): export!
 	  - (hide-dododo-window): ditto.
 
@@ -57,91 +57,91 @@
 
 	* - (create-dododo-window): rename from show-popup-dodod.
 
-	* - (draw-font): ƒRƒƒ“ƒgƒAƒEƒg‚µ‚Ä‚½ƒR[ƒh‚ğíœB
+	* - (draw-font): ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã—ã¦ãŸã‚³ãƒ¼ãƒ‰ã‚’å‰Šé™¤ã€‚
 
-	* - (calc-point): :point ‚ğw’è‚·‚é‚ÆŒ»İ‚Ì (point) ‚É•\¦‚·‚éB
+	* - (calc-point): :point ã‚’æŒ‡å®šã™ã‚‹ã¨ç¾åœ¨ã® (point) ã«è¡¨ç¤ºã™ã‚‹ã€‚
 
-	* - (define-popup-dododo-on-command): ƒRƒ}ƒ“ƒh“ü—Í‚É dododo ‚ğ•\¦‚·‚éƒtƒbƒNB
+	* - (define-popup-dododo-on-command): ã‚³ãƒãƒ³ãƒ‰å…¥åŠ›æ™‚ã« dododo ã‚’è¡¨ç¤ºã™ã‚‹ãƒ•ãƒƒã‚¯ã€‚
 	  - (define-popup-dododo-on-command-char): ditto
 
 2007-05-26  MIYAMUKO Katsuyuki
 
 	* - add require file.
 
-	* - require ®—B
+	* - require æ•´ç†ã€‚
 
-	* - (define-dododo-on-mouse): ƒ}ƒEƒXƒCƒxƒ“ƒg‚ğƒtƒbƒN‚µ‚Ä dododo ‚ğ•\¦‚·‚éB
+	* - (define-dododo-on-mouse): ãƒã‚¦ã‚¹ã‚¤ãƒ™ãƒ³ãƒˆã‚’ãƒ•ãƒƒã‚¯ã—ã¦ dododo ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
 
-	* - (popup-dododo): ƒpƒ‰ƒ[ƒ^‚ÌƒfƒtƒHƒ‹ƒg’l‚Í show-popup-dododo “à‚Åİ’è‚·‚é‚æ‚¤‚É‚µ‚½B
-	  - (popup-dododo): y ‚É bottom ‚ğw’è‚·‚é‚æ‚¤‚É‚µ‚½B
+	* - (popup-dododo): ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤ã¯ show-popup-dododo å†…ã§è¨­å®šã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  - (popup-dododo): y ã« bottom ã‚’æŒ‡å®šã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* - (show-popup-dododo): key ‚¾‚Æ–¾¦“I‚É nil ‚ğw’è‚³‚ê‚é‚Æ¢‚é‚Ì‚Å“à•”‚Å or ‚µ‚Äƒpƒ‰ƒ[ƒ^‚Ì
-	    ƒfƒtƒHƒ‹ƒg’l‚ğİ’è
-	  - (show-popup-dododo): x, y w’è‚ğ top, left, bottom, right ‚Åw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
+	* - (show-popup-dododo): key ã ã¨æ˜ç¤ºçš„ã« nil ã‚’æŒ‡å®šã•ã‚Œã‚‹ã¨å›°ã‚‹ã®ã§å†…éƒ¨ã§ or ã—ã¦ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®
+	    ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤ã‚’è¨­å®š
+	  - (show-popup-dododo): x, y æŒ‡å®šã‚’ top, left, bottom, right ã§æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* - (get-current-mouse-point): Œ»İ‚Ìƒ}ƒEƒX‚ÌÀ•W (screen) “¾‚é
-	  - (calc-point): point ‚ª :mouse ‚È‚çƒ}ƒEƒX‚ÌÀ•W‚ğ•Ô‚·B
-	    ‚»‚êˆÈŠO‚È‚ç point ‚©‚çÀ•W‚ğ“¾‚éB
+	* - (get-current-mouse-point): ç¾åœ¨ã®ãƒã‚¦ã‚¹ã®åº§æ¨™ (screen) å¾—ã‚‹
+	  - (calc-point): point ãŒ :mouse ãªã‚‰ãƒã‚¦ã‚¹ã®åº§æ¨™ã‚’è¿”ã™ã€‚
+	    ãã‚Œä»¥å¤–ãªã‚‰ point ã‹ã‚‰åº§æ¨™ã‚’å¾—ã‚‹ã€‚
 
-	* - (in-package :user) ‚ğ’Ç‰Á
+	* - (in-package :user) ã‚’è¿½åŠ 
 
-	* - (popup-dododo): ˆø”‚ğ key ‚É‚µ‚½B
-	  - (popup-dododo): ÅŒã‚É winctx ‚ğ•Ô‚µ‚Ä‚İ‚½B
+	* - (popup-dododo): å¼•æ•°ã‚’ key ã«ã—ãŸã€‚
+	  - (popup-dododo): æœ€å¾Œã« winctx ã‚’è¿”ã—ã¦ã¿ãŸã€‚
 
 	* - add hide-dododo-window
 
-	* - cairo, layered-window ‚Ìƒ[ƒh‚ğ package.l ‚Ås‚¤‚æ‚¤‚É‚µ‚½B
+	* - cairo, layered-window ã®ãƒ­ãƒ¼ãƒ‰ã‚’ package.l ã§è¡Œã†ã‚ˆã†ã«ã—ãŸã€‚
 
 	* - types.l => context.l
 
-	* - layered-window ‚ÌV API ‚ğg‚¤‚æ‚¤‚É‚µ‚½B
+	* - layered-window ã®æ–° API ã‚’ä½¿ã†ã‚ˆã†ã«ã—ãŸã€‚
 
-	* - ƒpƒbƒP[ƒW–¼•ÏX popup-dododo => popup-dododo.api
+	* - ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸åå¤‰æ›´ popup-dododo => popup-dododo.api
 
-	* - ƒpƒbƒP[ƒW•ÏXB
+	* - ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸å¤‰æ›´ã€‚
 	    popup-dododo => popup-dododo.api
 	    popup-dododo-editor => popup-dododo.editor
 
 2007-05-21  MIYAMUKO Katsuyuki
 
-	* - editor ‚ÌƒRƒ}ƒ“ƒh’è‹`B
+	* - editor ã®ã‚³ãƒãƒ³ãƒ‰å®šç¾©ã€‚
 
-	* - editor ‚ª‚ç‚İ‚ÌŠÖ”‚ğ’è‹`‚·‚é popup-dododo-editor ƒpƒbƒP[ƒW‚ğ’è‹`B
+	* - editor ãŒã‚‰ã¿ã®é–¢æ•°ã‚’å®šç¾©ã™ã‚‹ popup-dododo-editor ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚’å®šç¾©ã€‚
 
-	* - (show-popup-dododo): popup-dododo => show-popup-dododo, export ‚µ‚½B
+	* - (show-popup-dododo): popup-dododo => show-popup-dododo, export ã—ãŸã€‚
 
 	* - (destroy-all-dododo-window, destroy-dododo-window): export.
 
-	* - (*popup-dododo-glyph-name-list*): ƒOƒŠƒt–¼‚Ìˆê——B•âŠ®—p‚É export.
+	* - (*popup-dododo-glyph-name-list*): ã‚°ãƒªãƒ•åã®ä¸€è¦§ã€‚è£œå®Œç”¨ã« export.
 
 2007-05-20  MIYAMUKO Katsuyuki
 
-	* - glyph, dododo ‚ğ’Ç‰ÁB
+	* - glyph, dododo ã‚’è¿½åŠ ã€‚
 
-	* - (popup-dododo): width, height ‚Í“à•”‚ÅŒvZ‚·‚é‚æ‚¤‚É‚µ‚½B
-	  - (draw-font): font size ‚Å cairo-scale ‚µ‚ÄA‘Š‘Î“I‚ÉƒŒƒ“ƒ_ƒŠƒ“ƒO‚·‚é‚æ‚¤‚É‚µ‚½B
-	  - (popup-dododo-test-close-all): ƒeƒXƒg—pŠÖ”B
+	* - (popup-dododo): width, height ã¯å†…éƒ¨ã§è¨ˆç®—ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  - (draw-font): font size ã§ cairo-scale ã—ã¦ã€ç›¸å¯¾çš„ã«ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  - (popup-dododo-test-close-all): ãƒ†ã‚¹ãƒˆç”¨é–¢æ•°ã€‚
 
-	* - window-context: repeat ‚ğ’Ç‰ÁB (x-repeat . y-repeat)
+	* - window-context: repeat ã‚’è¿½åŠ ã€‚ (x-repeat . y-repeat)
 
-	* - (popup-dododo): ƒL[ƒ[ƒhˆø”‚ğæ‚é‚æ‚¤‚É‚µ‚½B
+	* - (popup-dododo): ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰å¼•æ•°ã‚’å–ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* - (show-dododo-window): translate-to-window-context ‚ğg‚¤‚æ‚¤‚É‚µ‚½B
+	* - (show-dododo-window): translate-to-window-context ã‚’ä½¿ã†ã‚ˆã†ã«ã—ãŸã€‚
 	  - (destroy-dododo-window): ditto.
-	  - (destroy-all-dododo-window): ’Ç‰ÁB
+	  - (destroy-all-dododo-window): è¿½åŠ ã€‚
 
-	* - (list-window-context): ŠÇ—‚µ‚Ä‚¢‚é Window ƒRƒ“ƒeƒLƒXƒg‚ğ‚·‚×‚Ä•Ô‚·ŠÖ”B
-	  - (translate-to-window-context): window-context ‚ğw’è‚³‚ê‚½‚ç‚»‚Ì‚Ü‚Ü•Ô‚·‚æ‚¤‚É‚µ‚½B
-	  - (translate-to-window-handle): new function. HWND ‚ğæ“¾‚·‚éƒ}ƒNƒB
+	* - (list-window-context): ç®¡ç†ã—ã¦ã„ã‚‹ Window ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã‚’ã™ã¹ã¦è¿”ã™é–¢æ•°ã€‚
+	  - (translate-to-window-context): window-context ã‚’æŒ‡å®šã•ã‚ŒãŸã‚‰ãã®ã¾ã¾è¿”ã™ã‚ˆã†ã«ã—ãŸã€‚
+	  - (translate-to-window-handle): new function. HWND ã‚’å–å¾—ã™ã‚‹ãƒã‚¯ãƒ­ã€‚
 
-	* - (window-proc-impl): NCHITTEST ‚Å HTCAPTION ‚ğ•Ô‚µ‚Äƒhƒ‰ƒbƒO‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
-	  - (window-proc-impl): HTCAPTION ‚Å‚à‰EƒNƒŠƒbƒN‚ÅI—¹‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
+	* - (window-proc-impl): NCHITTEST ã§ HTCAPTION ã‚’è¿”ã—ã¦ãƒ‰ãƒ©ãƒƒã‚°ã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  - (window-proc-impl): HTCAPTION ã§ã‚‚å³ã‚¯ãƒªãƒƒã‚¯ã§çµ‚äº†ã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* - api/glyph.l ‚ğ’Ç‰ÁB
+	* - api/glyph.l ã‚’è¿½åŠ ã€‚
 
-	* - ƒvƒƒgƒ^ƒCƒvì¬Bˆê‰“®‚­‚Í‚¸B
+	* - ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—ä½œæˆã€‚ä¸€å¿œå‹•ãã¯ãšã€‚
 
 2007-05-19  MIYAMUKO Katsuyuki
 
-	* popup-dododo ì¬ŠJn
+	* popup-dododo ä½œæˆé–‹å§‹
 

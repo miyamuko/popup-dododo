@@ -1,4 +1,4 @@
-= popup-dododo - ƒWƒ‡ƒWƒ‡•— Œø‰Ê‰¹(?) ‚ð•\Ž¦‚·‚é
+= popup-dododo - ã‚¸ãƒ§ã‚¸ãƒ§é¢¨ åŠ¹æžœéŸ³(?) ã‚’è¡¨ç¤ºã™ã‚‹
 
   * Author: MIYAMUKO Katsuyuki ((<URL:mailto:miyamuko (at) gmail.com>))
   * URL: ((<URL:http://miyamuko.s56.xrea.com/xyzzy/popup-dododo/intro.htm>))
@@ -7,32 +7,32 @@
 
 == SYNOPSIS
 
-popup-dododo - ƒWƒ‡ƒWƒ‡•— Œø‰Ê‰¹(?) ‚ð•\Ž¦‚·‚é
+popup-dododo - ã‚¸ãƒ§ã‚¸ãƒ§é¢¨ åŠ¹æžœéŸ³(?) ã‚’è¡¨ç¤ºã™ã‚‹
 
 == SYNOPSIS
 
   (require "popup-dododo")
 
-  (popup-dododo :ƒh (point))
-  (popup-dododo :ƒhƒbƒMƒƒƒ@[ƒ“ :mouse :size 300 :color '(255 0 0))
-  (popup-dododo :ƒS33 (point) :x-repeat 3 :timeout 10)
+  (popup-dododo :ãƒ‰ (point))
+  (popup-dododo :ãƒ‰ãƒƒã‚®ãƒ£ã‚¡ãƒ¼ãƒ³ :mouse :size 300 :color '(255 0 0))
+  (popup-dododo :ã‚´33 (point) :x-repeat 3 :timeout 10)
 
-  ;; ƒtƒbƒN‚Ì’Ç‰Á
-  (add-popup-dododo-on-mouse #\LBtnDown :ƒS5 :size 40 :x-repeat 3)
-  (add-popup-dododo-on-mouse #\RBtnDown :ƒh :color '(255 0 0))
-  (add-popup-dododo-on-command 'kill-line :ƒYƒLƒ…ƒEƒEƒEƒ“ :color '(0 0 255) :size 200)
-  (add-popup-dododo-on-command-char #\RET :ƒƒƒ^ƒ@ :color '(255 0 0))
-  (add-popup-dododo-on-command 'other-window :ƒtƒƒŠc :color '(255 0 0))
-  (add-popup-dododo-on-command 'split-window :ƒXƒHƒHƒH :color '(255 0 0))
-  (add-popup-dododo-on-command 'delete-other-windows :ƒKƒbƒVƒ“ :color '(255 0 0))
+  ;; ãƒ•ãƒƒã‚¯ã®è¿½åŠ 
+  (add-popup-dododo-on-mouse #\LBtnDown :ã‚´5 :size 40 :x-repeat 3)
+  (add-popup-dododo-on-mouse #\RBtnDown :ãƒ‰ :color '(255 0 0))
+  (add-popup-dododo-on-command 'kill-line :ã‚ºã‚­ãƒ¥ã‚¦ã‚¦ã‚¦ãƒ³ :color '(0 0 255) :size 200)
+  (add-popup-dododo-on-command-char #\RET :ãƒ¡ãƒ¡ã‚¿ã‚¡ :color '(255 0 0))
+  (add-popup-dododo-on-command 'other-window :ãƒ•ãƒ¯ãƒªâ€¦ :color '(255 0 0))
+  (add-popup-dododo-on-command 'split-window :ã‚¹ã‚©ã‚©ã‚© :color '(255 0 0))
+  (add-popup-dododo-on-command 'delete-other-windows :ã‚¬ãƒƒã‚·ãƒ³ :color '(255 0 0))
 
-  ;; ƒtƒbƒN‚Ìíœ
-  (remove-popup-dododo-on-mouse #\LBtnDown :ƒS3)
-  (remove-popup-dododo-on-mouse #\RBtnDown :ƒh)
-  (remove-popup-dododo-on-command 'kill-line :ƒYƒLƒ…ƒEƒEƒEƒ“)
-  (remove-popup-dododo-on-command-char #\RET :ƒƒƒ^ƒ@)
+  ;; ãƒ•ãƒƒã‚¯ã®å‰Šé™¤
+  (remove-popup-dododo-on-mouse #\LBtnDown :ã‚´3)
+  (remove-popup-dododo-on-mouse #\RBtnDown :ãƒ‰)
+  (remove-popup-dododo-on-command 'kill-line :ã‚ºã‚­ãƒ¥ã‚¦ã‚¦ã‚¦ãƒ³)
+  (remove-popup-dododo-on-command-char #\RET :ãƒ¡ãƒ¡ã‚¿ã‚¡)
 
-  ;; ƒtƒbƒN‚ð‘S•”íœ
+  ;; ãƒ•ãƒƒã‚¯ã‚’å…¨éƒ¨å‰Šé™¤
   (clear-popup-dododo-on-mouse)
   (clear-popup-dododo-on-command)
   (clear-popup-dododo-on-command-char)
@@ -40,89 +40,89 @@ popup-dododo - ƒWƒ‡ƒWƒ‡•— Œø‰Ê‰¹(?) ‚ð•\Ž¦‚·‚é
 
 == DESCRIPTION
 
-popup-dododo ‚ÍƒWƒ‡ƒWƒ‡•—‚ÌŒø‰Ê‰¹(?) ‚ð xyzzy ã‚Éƒ|ƒbƒvƒAƒbƒv•\Ž¦‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Å‚·B
+popup-dododo ã¯ã‚¸ãƒ§ã‚¸ãƒ§é¢¨ã®åŠ¹æžœéŸ³(?) ã‚’ xyzzy ä¸Šã«ãƒãƒƒãƒ—ã‚¢ãƒƒãƒ—è¡¨ç¤ºã™ã‚‹ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã™ã€‚
 
-popup-dododo ‚ð—˜—p‚·‚ê‚Î•’i‚Ì xyzzy ‚Å‚Ì•ÒWì‹Æ‚É‹C‡‚ª“ü‚é‚±‚Æ‚Å‚µ‚å‚¤B
+popup-dododo ã‚’åˆ©ç”¨ã™ã‚Œã°æ™®æ®µã® xyzzy ã§ã®ç·¨é›†ä½œæ¥­ã«æ°—åˆãŒå…¥ã‚‹ã“ã¨ã§ã—ã‚‡ã†ã€‚
 
 == INSTALL
 
-popup-dododo ‚ð—˜—p‚·‚é‚É‚Í
-((<"ƒfƒXƒNƒgƒbƒv ƒhƒhƒh"|URL:http://massacre.s59.xrea.com/game/dtddd/download.htm>))
-‚É•t‘®‚Ì DesktopDoDoDo ƒtƒHƒ“ƒg‚ðƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä‚­‚¾‚³‚¢ (Windows\Font ƒtƒHƒ‹ƒ_‚ÉƒRƒs[)B
+popup-dododo ã‚’åˆ©ç”¨ã™ã‚‹ã«ã¯
+((<"ãƒ‡ã‚¹ã‚¯ãƒˆãƒƒãƒ— ãƒ‰ãƒ‰ãƒ‰"|URL:http://massacre.s59.xrea.com/game/dtddd/download.htm>))
+ã«ä»˜å±žã® DesktopDoDoDo ãƒ•ã‚©ãƒ³ãƒˆã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ãã ã•ã„ (Windows\Font ãƒ•ã‚©ãƒ«ãƒ€ã«ã‚³ãƒ”ãƒ¼)ã€‚
 
-((<NetInstaller|URL:http://www7a.biglobe.ne.jp/~hat/xyzzy/ni.html>)) ‚ÅƒCƒ“ƒXƒg[ƒ‹‚µ‚½ê‡‚Í 4 ˆÈ~‚ðA
-NetInstaller + ni-autoload ‚ðŽg‚Á‚Ä‚¢‚él‚Í 5 ˆÈ~‚Å OK ‚Å‚·B
+((<NetInstaller|URL:http://www7a.biglobe.ne.jp/~hat/xyzzy/ni.html>)) ã§ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸå ´åˆã¯ 4 ä»¥é™ã‚’ã€
+NetInstaller + ni-autoload ã‚’ä½¿ã£ã¦ã„ã‚‹äººã¯ 5 ä»¥é™ã§ OK ã§ã™ã€‚
 
-(1) cairo ‚Æ layered-window ‚ðƒCƒ“ƒXƒg[ƒ‹‚µ‚Ü‚· (NetInstaller ‚ÅƒCƒ“ƒXƒg[ƒ‹‰Â”\‚Å‚·)B
+(1) cairo ã¨ layered-window ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¾ã™ (NetInstaller ã§ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å¯èƒ½ã§ã™)ã€‚
 
     * ((<URL:http://miyamuko.s56.xrea.com/xyzzy/cairo/intro.htm>))
     * ((<URL:http://miyamuko.s56.xrea.com/xyzzy/layered-window/intro.htm>))
 
-(2) ƒA[ƒJƒCƒu‚ðƒ_ƒEƒ“ƒ[ƒh‚µ‚Ü‚·B
+(2) ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã¾ã™ã€‚
 
     ((<URL:http://miyamuko.s56.xrea.com/xyzzy/archives/popup-dododo.zip>))
 
-(3) ƒA[ƒJƒCƒu‚ð“WŠJ‚µ‚ÄA$XYZZY/site-lisp ”z‰º‚Éƒtƒ@ƒCƒ‹‚ðƒRƒs[‚µ‚Ü‚·B
+(3) ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–ã‚’å±•é–‹ã—ã¦ã€$XYZZY/site-lisp é…ä¸‹ã«ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã™ã€‚
 
-(4) ~/.xyzzy ‚Ü‚½‚Í $XYZZY/site-lisp/siteinit.l ‚ÉˆÈ‰º‚ÌƒR[ƒh‚ð’Ç‰Á‚µ‚Ü‚·B
+(4) ~/.xyzzy ã¾ãŸã¯ $XYZZY/site-lisp/siteinit.l ã«ä»¥ä¸‹ã®ã‚³ãƒ¼ãƒ‰ã‚’è¿½åŠ ã—ã¾ã™ã€‚
 
         ;; popup-dododo
         (require "popup-dododo")
 
-(5) Ý’è‚ð”½‰f‚³‚¹‚é‚½‚ß xyzzy ‚ðÄ‹N“®‚µ‚Ä‚­‚¾‚³‚¢B
+(5) è¨­å®šã‚’åæ˜ ã•ã›ã‚‹ãŸã‚ xyzzy ã‚’å†èµ·å‹•ã—ã¦ãã ã•ã„ã€‚
 
-    ¦siteinit.l ‚É‹Lq‚µ‚½ê‡‚É‚ÍÄƒ_ƒ“ƒv‚ª•K—v‚Å‚·B
+    â€»siteinit.l ã«è¨˜è¿°ã—ãŸå ´åˆã«ã¯å†ãƒ€ãƒ³ãƒ—ãŒå¿…è¦ã§ã™ã€‚
 
-(6) add-popup-dododo-on-xxx ‚ÅƒtƒbƒN‚ðŽdŠ|‚¯‚é‚Æ‚¢‚¢‚Å‚µ‚å‚¤B
+(6) add-popup-dododo-on-xxx ã§ãƒ•ãƒƒã‚¯ã‚’ä»•æŽ›ã‘ã‚‹ã¨ã„ã„ã§ã—ã‚‡ã†ã€‚
 
 
 == MODULE
 
-=== ƒOƒŠƒt–¼
+=== ã‚°ãƒªãƒ•å
 
-popup-dododo ‚ÉŽw’è‰Â”\‚ÈƒOƒŠƒt–¼‚ÍˆÈ‰º‚Ì‚Æ‚¨‚è‚Å‚·B
+popup-dododo ã«æŒ‡å®šå¯èƒ½ãªã‚°ãƒªãƒ•åã¯ä»¥ä¸‹ã®ã¨ãŠã‚Šã§ã™ã€‚
 
-  * ¡
-  * @ (‘SŠp‹ó”’)
-  * ƒhƒbƒMƒƒƒ@[ƒ“
-  * ƒYƒLƒ…ƒEƒEƒEƒ“
-  * ƒƒƒ^ƒ@ 
-  * ƒXƒHƒHƒH
-  * ƒtƒƒŠc
-  * ƒKƒbƒVƒ“
-  * ƒh[1-35] (ƒh1 ‚©‚ç ƒh35 ‚Ü‚Å‚ ‚è‚Ü‚·)
-  * ƒS[1-45] (ƒS1 ‚©‚ç ƒS45 ‚Ü‚Å‚ ‚è‚Ü‚·)
+  * â– 
+  * ã€€ (å…¨è§’ç©ºç™½)
+  * ãƒ‰ãƒƒã‚®ãƒ£ã‚¡ãƒ¼ãƒ³
+  * ã‚ºã‚­ãƒ¥ã‚¦ã‚¦ã‚¦ãƒ³
+  * ãƒ¡ãƒ¡ã‚¿ã‚¡ 
+  * ã‚¹ã‚©ã‚©ã‚©
+  * ãƒ•ãƒ¯ãƒªâ€¦
+  * ã‚¬ãƒƒã‚·ãƒ³
+  * ãƒ‰[1-35] (ãƒ‰1 ã‹ã‚‰ ãƒ‰35 ã¾ã§ã‚ã‚Šã¾ã™)
+  * ã‚´[1-45] (ã‚´1 ã‹ã‚‰ ã‚´45 ã¾ã§ã‚ã‚Šã¾ã™)
 
-ƒOƒŠƒt–¼‚Í•¶Žš—ñ‚Ü‚½‚ÍƒL[ƒ[ƒh‚ÅŽw’è‚µ‚Ü‚·B
-‚È‚¨A‚·‚±‚µ‚®‚ç‚¢ typo ‚µ‚Ä‚à”FŽ¯‚µ‚Ü‚·B
+ã‚°ãƒªãƒ•åã¯æ–‡å­—åˆ—ã¾ãŸã¯ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã§æŒ‡å®šã—ã¾ã™ã€‚
+ãªãŠã€ã™ã“ã—ãã‚‰ã„ typo ã—ã¦ã‚‚èªè­˜ã—ã¾ã™ã€‚
 
-‹ï‘Ì“I‚ÈŽš‘Ì‚Í
+å…·ä½“çš„ãªå­—ä½“ã¯
 ((<"site-lisp/popup-dododo/docs/desktopdododo-glyphs.png"|URL:http://miyamuko.s56.xrea.com/xyzzy/images/desktopdododo-glyphs.png>))
-‚ðŽQl‚É‚µ‚Ä‚­‚¾‚³‚¢B
+ã‚’å‚è€ƒã«ã—ã¦ãã ã•ã„ã€‚
 
 
 === PACKAGE
 
-popup-dododo ‚ÍˆÈ‰º‚ÌƒpƒbƒP[ƒW‚ð—˜—p‚µ‚Ä‚¢‚Ü‚·B
+popup-dododo ã¯ä»¥ä¸‹ã®ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚’åˆ©ç”¨ã—ã¦ã„ã¾ã™ã€‚
 
   * popup-dododo.ffi
 
-    winapi ’è‹`
+    winapi å®šç¾©
 
   * popup-dododo.api
 
-    popup •\Ž¦‚ðs‚¤ƒ‰ƒCƒuƒ‰ƒŠB
+    popup è¡¨ç¤ºã‚’è¡Œã†ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã€‚
 
   * popup-dododo.editor
 
-    popup •\Ž¦‚ðs‚¤ƒRƒ}ƒ“ƒhAƒtƒbƒNŠÖ”‚È‚ÇB
-    Ž©“®“I‚É user, editor ƒpƒbƒP[ƒW‚©‚ç use-package ‚µ‚Ü‚·B
+    popup è¡¨ç¤ºã‚’è¡Œã†ã‚³ãƒžãƒ³ãƒ‰ã€ãƒ•ãƒƒã‚¯é–¢æ•°ãªã©ã€‚
+    è‡ªå‹•çš„ã« user, editor ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‹ã‚‰ use-package ã—ã¾ã™ã€‚
 
 === EXPORT
 
-popup-dododo ‚ÍˆÈ‰º‚ÌƒVƒ“ƒ{ƒ‹‚ð export ‚µ‚Ä‚¢‚Ü‚·B
+popup-dododo ã¯ä»¥ä¸‹ã®ã‚·ãƒ³ãƒœãƒ«ã‚’ export ã—ã¦ã„ã¾ã™ã€‚
 
-  * popup-dododo.api ƒpƒbƒP[ƒW
+  * popup-dododo.api ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸
 
     * *popup-dododo-glyph-name-list*
     * popup-dododo-window
@@ -134,7 +134,7 @@ popup-dododo ‚ÍˆÈ‰º‚ÌƒVƒ“ƒ{ƒ‹‚ð export ‚µ‚Ä‚¢‚Ü‚·B
     * destroy-dododo-window
     * destroy-all-dododo-window
 
-  * popup-dododo.editor ƒpƒbƒP[ƒW
+  * popup-dododo.editor ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸
 
     * popup-dododo
 
@@ -153,57 +153,57 @@ popup-dododo ‚ÍˆÈ‰º‚ÌƒVƒ“ƒ{ƒ‹‚ð export ‚µ‚Ä‚¢‚Ü‚·B
 
 === VARIABLE
 
-‚ ‚Æ‚Å‚©‚­B
+ã‚ã¨ã§ã‹ãã€‚
 
 === COMMAND
 
-‚ ‚Æ‚Å‚©‚­B
+ã‚ã¨ã§ã‹ãã€‚
 
 
 === FUNCTION
 
-‚ ‚Æ‚Å‚©‚­B
+ã‚ã¨ã§ã‹ãã€‚
 
 
 == TODO
 
-* “§‰ßˆ—‚ð layered-window ‚ðŽg‚í‚¸‚Éƒ}ƒXƒN‚Ås‚¤
-* ƒAƒjƒ[ƒVƒ‡ƒ“
+* é€éŽå‡¦ç†ã‚’ layered-window ã‚’ä½¿ã‚ãšã«ãƒžã‚¹ã‚¯ã§è¡Œã†
+* ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³
   * AnimateWindow
   * SDL?
-  * ƒtƒF[ƒhƒCƒ“EƒAƒEƒg
-  * ƒXƒ‰ƒCƒhƒCƒ“EƒAƒEƒg
-  * ‰ñ“]EŠg‘åEk¬
-* ƒŠƒs[ƒgˆ—‚ÌƒtƒHƒ“ƒg‚Ì”z’u‚ð‚à‚Á‚Æ‚Ü‚¶‚ß‚É‚·‚é
-* ŽÎ‚ß•ûŒü‚ÉƒŠƒs[ƒg
-* •¶Žš‚ÌF‚ð•Ï‚¦‚È‚ª‚çƒŠƒs[ƒg (ƒOƒ‰ƒf[ƒVƒ‡ƒ“)
-* •¶Žš‚Ì‘å‚«‚³‚ð•Ï‚¦‚È‚ª‚çƒŠƒs[ƒg
-* popup window •\Ž¦•”•ª‚ðƒ‰ƒCƒuƒ‰ƒŠ‰»
-* ƒtƒbƒNŽü‚è‚Ìˆ—‚ðŒy‚­‚·‚é
-* DesktopDoDoDo ƒtƒHƒ“ƒg‚Ì‘¶Ýƒ`ƒFƒbƒN
-* ƒGƒ‰[ˆ—
-* ƒhƒLƒ…ƒƒ“ƒg
+  * ãƒ•ã‚§ãƒ¼ãƒ‰ã‚¤ãƒ³ãƒ»ã‚¢ã‚¦ãƒˆ
+  * ã‚¹ãƒ©ã‚¤ãƒ‰ã‚¤ãƒ³ãƒ»ã‚¢ã‚¦ãƒˆ
+  * å›žè»¢ãƒ»æ‹¡å¤§ãƒ»ç¸®å°
+* ãƒªãƒ”ãƒ¼ãƒˆå‡¦ç†ã®ãƒ•ã‚©ãƒ³ãƒˆã®é…ç½®ã‚’ã‚‚ã£ã¨ã¾ã˜ã‚ã«ã™ã‚‹
+* æ–œã‚æ–¹å‘ã«ãƒªãƒ”ãƒ¼ãƒˆ
+* æ–‡å­—ã®è‰²ã‚’å¤‰ãˆãªãŒã‚‰ãƒªãƒ”ãƒ¼ãƒˆ (ã‚°ãƒ©ãƒ‡ãƒ¼ã‚·ãƒ§ãƒ³)
+* æ–‡å­—ã®å¤§ãã•ã‚’å¤‰ãˆãªãŒã‚‰ãƒªãƒ”ãƒ¼ãƒˆ
+* popup window è¡¨ç¤ºéƒ¨åˆ†ã‚’ãƒ©ã‚¤ãƒ–ãƒ©ãƒªåŒ–
+* ãƒ•ãƒƒã‚¯å‘¨ã‚Šã®å‡¦ç†ã‚’è»½ãã™ã‚‹
+* DesktopDoDoDo ãƒ•ã‚©ãƒ³ãƒˆã®å­˜åœ¨ãƒã‚§ãƒƒã‚¯
+* ã‚¨ãƒ©ãƒ¼å‡¦ç†
+* ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆ
 
 
 == KNOWN BUGS
 
-‚È‚µB
+ãªã—ã€‚
 
 
 == AUTHOR
 
-‚Ý‚â‚Þ‚± ‚©‚Â‚ä‚« (((<URL:mailto:miyamuko (at) gmail.com>)))
+ã¿ã‚„ã‚€ã“ ã‹ã¤ã‚†ã (((<URL:mailto:miyamuko (at) gmail.com>)))
 
 
 == SEE ALSO
 
-  : ƒfƒXƒNƒgƒbƒv ƒhƒhƒh
+  : ãƒ‡ã‚¹ã‚¯ãƒˆãƒƒãƒ— ãƒ‰ãƒ‰ãƒ‰
         ((<URL:http://massacre.s59.xrea.com/game/dtddd/download.htm>))
 
 
 == COPYRIGHT
 
-popup-dododo ‚Í MIT/X ƒ‰ƒCƒZƒ“ƒX‚É‚µ‚½‚ª‚Á‚Ä—˜—p‰Â”\‚Å‚·B
+popup-dododo ã¯ MIT/X ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã«ã—ãŸãŒã£ã¦åˆ©ç”¨å¯èƒ½ã§ã™ã€‚
 
 See popup-dododo/docs/MIT-LICENSE for full license.
 
